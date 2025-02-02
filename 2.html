@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High School Activities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset and Body Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      color: #333;
+      background-color: #e5f1f6;
+      overflow-x: hidden;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #4dd0e1;
+      padding: 20px 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 4px;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 80vh;
+      background-image: linear-gradient(135deg, #ffb6b9, #4dd0e1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h1 {
+      font-size: 4.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      animation: fadeIn 1.2s ease-out;
+      margin-bottom: 30px;
+      color: #ffdfdf;
+    }
+
+    /* Events Section */
+    .events {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 80px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 1100px;
+    }
+
+    .event-card {
+      background-color: #ffe0e6;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .event-card img {
+      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .event-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .event-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #ff4c7c;
+      font-weight: 600;
+    }
+
+    .event-card p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #4dd0e1;
+      color: #fff;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      transition: 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffb6b9;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .events .event-card p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#events">Events</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Welcome to Our High School Activities</h1>
+      <p>Explore the upcoming events and get involved!</p>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="events" id="events">
+    <div class="event-card">
+      <img src="https://via.placeholder.com/600x300/ff7b9b/ffffff?text=Science+Fair" alt="Science Fair">
+      <h3>Science Fair - April 15, 2025</h3>
+      <p>Join us for the annual Science Fair, where students showcase their innovative projects. Whether you’re into chemistry, biology, or physics, there’s something for everyone!</p>
+    </div>
+
+    <div class="event-card">
+      <img src="https://via.placeholder.com/600x300/f9c7d0/ffffff?text=Football+Tournament" alt="Football Tournament">
+      <h3>Football Tournament - May 5, 2025</h3>
+      <p>The football tournament is a friendly competition among different teams. Come cheer for your favorite team and enjoy some exciting moments on the field!</p>
+    </div>
+
+    <div class="event-card">
+      <img src="https://via.placeholder.com/600x300/ff7b9b/ffffff?text=Spring+Dance" alt="Spring Dance">
+      <h3>Spring Dance - May 12, 2025</h3>
+      <p>The Spring Dance is a fun-filled evening with music, dancing, and memories to be made. Let’s make it a night to remember with friends and good vibes!</p>
+    </div>
+
+    <div class="event-card">
+      <img src="https://via.placeholder.com/600x300/f9c7d0/ffffff?text=Art+Exhibition" alt="Art Exhibition">
+      <h3>Art Exhibition - June 3, 2025</h3>
+      <p>Showcasing the incredible talent of our students, the Art Exhibition features beautiful paintings, sculptures, and creative works. Be sure to check out the masterpieces!</p>
+    </div>
+
+    <div class="event-card">
+      <img src="https://via.placeholder.com/600x300/ff7b9b/ffffff?text=Talent+Show" alt="Talent Show">
+      <h3>Talent Show - June 10, 2025</h3>
+      <p>From singing and dancing to stand-up comedy, the Talent Show will feature performances from our very own students. Come out to support your peers!</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 High School Activities. All rights reserved.</p>
+    <a href="#">Contact</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+  </footer>
+
+</body>
+</html>

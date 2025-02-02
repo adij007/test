@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Science & Math Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            background-color: #eef2f7;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #004466;
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            font-size: 2rem;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 1.5rem;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #006699;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #004466;
+            border-left: 5px solid #006699;
+            padding-left: 1rem;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .subject-image {
+            width: 40%;
+            margin-right: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .subject-image:hover {
+            transform: scale(1.05);
+        }
+
+        .lesson-text {
+            width: 55%;
+        }
+
+        .lesson-text h3 {
+            font-size: 1.8rem;
+            color: #003366;
+        }
+
+        .lesson-text p, .lesson-text ul {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #003344;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Advanced Learning Portal</h1>
+            <ul>
+                <li><a href="#mathematics">Mathematics</a></li>
+                <li><a href="#physics">Physics</a></li>
+                <li><a href="#biology">Biology</a></li>
+                <li><a href="#chemistry">Chemistry</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="mathematics">
+            <h2>Advanced Mathematics: Integrals</h2>
+            <div class="content">
+                <img src="https://via.placeholder.com/400x300" alt="Integral Graph" class="subject-image">
+                <div class="lesson-text">
+                    <h3>Definite and Indefinite Integrals</h3>
+                    <p>An integral represents accumulation, such as area under a curve. The general form is:</p>
+                    <p>\[
+                        \int_a^b f(x)\,dx = F(b) - F(a)
+                    \]</p>
+                    <p>where \( F(x) \) is the antiderivative of \( f(x) \).</p>
+                    <p>Integration techniques include:</p>
+                    <ul>
+                        <li>Integration by Parts: \( \int u\,dv = uv - \int v\,du \)</li>
+                        <li>Substitution: \( \int f(g(x))g'(x)\,dx = \int f(u)\,du \)</li>
+                        <li>Partial Fractions and Trigonometric Integrals</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="physics">
+            <h2>Physics: Special Relativity</h2>
+            <div class="content">
+                <img src="https://via.placeholder.com/400x300" alt="Relativity" class="subject-image">
+                <div class="lesson-text">
+                    <h3>Key Concepts</h3>
+                    <p>Special relativity revolutionized space-time concepts. Core equations include:</p>
+                    <p>\[
+                        E = mc^2
+                    \]</p>
+                    <p>and time dilation:</p>
+                    <p>\[
+                        \Delta t' = \frac{\Delta t}{\sqrt{1 - \frac{v^2}{c^2}}}
+                    \]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="biology">
+            <h2>Biology: DNA Structure</h2>
+            <div class="content">
+                <img src="https://via.placeholder.com/400x300" alt="DNA" class="subject-image">
+                <div class="lesson-text">
+                    <h3>DNA Replication & Function</h3>
+                    <p>DNA encodes genetic instructions. The double helix is stabilized by hydrogen bonds between base pairs:</p>
+                    <p>A-T and G-C.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="chemistry">
+            <h2>Chemistry: Organic Reactions</h2>
+            <div class="content">
+                <img src="https://via.placeholder.com/400x300" alt="Molecule" class="subject-image">
+                <div class="lesson-text">
+                    <h3>Reaction Mechanisms</h3>
+                    <p>Common mechanisms include nucleophilic substitution (\( S_N1 \) and \( S_N2 \)) and electrophilic addition.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Advanced Learning Portal | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

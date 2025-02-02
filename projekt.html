@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced High School Program</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, #4f46e5, #9333ea);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .card {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+        .btn {
+            background: #6b21a8;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #4c1d95;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2));
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .card:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="fade-in">Welcome to Our Advanced High School Program</h1>
+    <p class="fade-in" style="animation-delay: 1s;">Unlock Your Potential with Cutting-Edge Curriculum</p>
+
+    <div class="card fade-in" style="animation-delay: 2s;" onclick="window.location.href='https://www.nasa.gov'">
+        <h2>STEM Focus</h2>
+        <p>Experience the future of education with advanced STEM programs tailored for curious minds.</p>
+    </div>
+    <div class="card fade-in" style="animation-delay: 2.5s;" onclick="window.location.href='https://www.un.org'">
+        <h2>Global Opportunities</h2>
+        <p>Join international exchange programs and global learning experiences.</p>
+    </div>
+    <div class="card fade-in" style="animation-delay: 3s;" onclick="window.location.href='https://www.khanacademy.org'">
+        <h2>Innovative Learning</h2>
+        <p>Learn with interactive and project-based methodologies designed for the 21st century.</p>
+    </div>
+
+    <button class="btn fade-in" style="animation-delay: 4s;">Apply Now</button>
+
+    <footer style="margin-top: 50px;">
+        <p>&copy; 2025 Advanced High School Program. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const fadeIns = document.querySelectorAll(".fade-in");
+            fadeIns.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.5}s`;
+                el.classList.add("fade-in");
+            });
+        });
+    </script>
+</body>
+</html>

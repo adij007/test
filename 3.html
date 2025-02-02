@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Clubs</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('https://source.unsplash.com/1600x900/?university');
+            background-size: cover;
+            background-position: center;
+        }
+        .header h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .slide {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease-in-out;
+        }
+        .slide:nth-child(odd) {
+            background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+        }
+        .slide .content {
+            max-width: 700px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        .slide h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .slide p {
+            font-size: 1.5rem;
+            line-height: 1.8;
+        }
+        .slide img {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+        #slide1 { background-image: url('https://source.unsplash.com/1600x900/?artificial-intelligence,technology'); }
+        #slide2 { background-image: url('https://source.unsplash.com/1600x900/?debate,discussion'); }
+        #slide3 { background-image: url('https://source.unsplash.com/1600x900/?sports,athletics'); }
+        .footer {
+            padding: 50px 0;
+            background: #000;
+            font-size: 1.2rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide:hover .content {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>University Clubs</h1>
+    </div>
+    <div id="slide1" class="slide">
+        <div class="content">
+            <h1>Artificial Intelligence Club</h1>
+            <p>Explore AI, machine learning, and data science through research projects, hackathons, and discussions on cutting-edge technology.</p>
+            <img src="https://source.unsplash.com/800x500/?ai,technology" alt="AI Club">
+        </div>
+    </div>
+    <div id="slide2" class="slide">
+        <div class="content">
+            <h1>Debate Club</h1>
+            <p>Sharpen your argumentation and public speaking skills through competitive debates, discussions, and expert-led workshops.</p>
+            <img src="https://source.unsplash.com/800x500/?debate,public-speaking" alt="Debate Club">
+        </div>
+    </div>
+    <div id="slide3" class="slide">
+        <div class="content">
+            <h1>Sports Club</h1>
+            <p>Stay active and compete in various sports like football, basketball, and athletics. Join training sessions and tournaments!</p>
+            <img src="https://source.unsplash.com/800x500/?sports,fitness" alt="Sports Club">
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 University Clubs | All rights reserved</p>
+    </div>
+</body>
+</html>

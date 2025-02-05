@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gjimnazi "Arben Broci"</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, #4f46e5, #9333ea);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .card {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+        .btn {
+            background: #6b21a8;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #4c1d95;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2));
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .card:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="fade-in">Mireseerdhe ne faqen e shkolles "Arben Broci"</h1>
+
+    <div class="card fade-in" style="animation-delay: 2s;" onclick="window.location.href='https://adij007.github.io/test/1.html'">
+        <h2>Lendet ekzakte</h2>
+        <p></p>
+    </div>
+    <div class="card fade-in" style="animation-delay: 2.5s;" onclick="window.location.href='https://adij007.github.io/test/2.html'">
+        <h2>Aktivitete</h2>
+        <p>Bashkohu dhe ti me ne per eksperienca te paharrueshme.</p>
+    </div>
+    <div class="card fade-in" style="animation-delay: 3s;" onclick="window.location.href='https://adij007.github.io/test/3.html'">
+        <h2>Klube</h2>
+        <p></p>
+    </div>
+
+    
+    <footer style="margin-top: 50px;">
+        <p>&copy; 2025 Gjimnazi "Arben Broci"</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const fadeIns = document.querySelectorAll(".fade-in");
+            fadeIns.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.5}s`;
+                el.classList.add("fade-in");
+            });
+        });
+    </script>
+</body>
+</html>
